@@ -1,0 +1,101 @@
+user_id,playlist_id,playlist_name,track_id,artists,album_name,track_name,popularity,duration_ms,explicit,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,time_signature,track_genre
+921445511,123456789,Shuzo's Favorite,1JEqsDV5Y7Qdtc4FeUhsl1,Os Barões Da Pisadinha;Wesley Safadão,Da Roça Pra Cidade (Ao Vivo),Beijo do Vampiro - Ao Vivo,51,149202,False,0.666,0.968,4,-2.076,1,0.059,0.446,0.0,0.0625,0.96,164.007,4,forro
+921445511,123456789,Shuzo's Favorite,5h990XbUHkuFfHic1ZGyg1,Helker,Resistir,Resistir,19,326658,False,0.524,0.956,2,-3.192,0,0.0799,0.000191,0.00549,0.0597,0.351,128.003,4,heavy-metal
+921445511,123456789,Shuzo's Favorite,7eG6iEMUE9XrFoJsk8HOQu,Yimino;Nick Miller;Gina Beck,Breaker,Flack,7,281187,False,0.75,0.351,2,-11.682,1,0.0644,0.437,0.891,0.0948,0.195,79.998,4,idm
+921445511,123456789,Shuzo's Favorite,1SFCLHrE49C1Sd2fyxQfkg,Ron White,Truckstop Comedy,Hustler,22,101266,True,0.607,0.52,6,-17.962,1,0.925,0.924,2.95e-06,0.689,0.524,90.479,3,comedy
+921445511,123456789,Shuzo's Favorite,3axcOHtOYpoE4opkZ4RKfk,PIÑA PINK,Café Contemplation,Café Contemplation,26,184800,False,0.632,0.3,10,-14.233,0,0.0557,0.954,0.917,0.187,0.231,75.004,4,study
+921445511,123456789,Shuzo's Favorite,5pYFwY1Jc2fYBmkjykdW5g,Yosi Horikawa,Vapor,Starlings,10,293624,False,0.446,0.955,2,-12.47,1,0.182,0.00392,0.722,0.761,0.289,163.976,4,idm
+921445511,123456789,Shuzo's Favorite,5bI5zVdbMKtO9JgeUIocW6,Theatres Des Vampires,Moonlight Waltz,Sangue,17,238960,False,0.512,0.937,5,-3.76,0,0.0426,0.321,7.69e-06,0.196,0.67,149.998,4,black-metal
+921445511,123456789,Shuzo's Favorite,0SSFVYTZD4Hge0kUhSPEVQ,Russell Peters,Russell Peters Hosts: Comics Without Borders,Porno Chicks,30,111084,True,0.589,0.398,7,-20.467,1,0.943,0.793,0.0,0.937,0.607,79.068,4,comedy
+921445511,123456789,Shuzo's Favorite,4ZS3D6vrI42Q0RBdovCKEl,Manjari;Bijibal,"Eeran Meghame (From ""Nasrani"") - Single","Eeran Meghame (From ""Nasrani"")",23,251506,False,0.373,0.503,5,-6.881,1,0.0496,0.765,0.0,0.104,0.546,164.74,3,malay
+921445511,123456789,Shuzo's Favorite,1NasftXa4E2YxOpQPfgXzb,Pappo;Viejas Locas,"Pappo y Amigos, Vol. 1",Blus Local,38,147440,False,0.575,0.637,2,-7.757,0,0.0434,0.101,0.0169,0.224,0.891,134.393,4,heavy-metal
+921445511,123456789,Shuzo's Favorite,6ym5ZwHzAHnQYfYu1HyWNE,Tineidae,Exo,Metal Claws,10,391254,False,0.163,0.322,9,-16.863,1,0.0537,0.115,0.935,0.0594,0.0591,88.513,1,idm
+921445511,123456789,Shuzo's Favorite,33Nv3eQkRZR2VMqrjWsnUt,Kitchen Dwellers,Wise River,Drowning (... Again),35,281413,False,0.506,0.782,7,-5.41,1,0.0291,0.602,0.000171,0.139,0.711,155.048,4,bluegrass
+921445511,123456789,Shuzo's Favorite,06Rxt3Twa6Y5X7GDLWiaEB,Devil Master,Manifestations,The Devil Master (Devil is Your Master),18,135826,False,0.0916,0.998,11,-5.353,0,0.17,0.00229,0.16,0.522,0.0615,173.833,4,black-metal
+921445511,123456789,Shuzo's Favorite,58pUxjsOKICuGq9Nv1dvLE,ArtSaves,Empty Sounds,Real Immigrant,0,159500,False,0.328,0.0779,9,-16.53,0,0.0374,0.808,0.746,0.134,0.0361,87.035,4,iranian
+921445511,123456789,Shuzo's Favorite,28hyx9w8gWqRomyF4M0gY4,Datassette,Mannequin on the Run EP,Metropolis Light Transport,9,302928,False,0.715,0.758,0,-8.147,1,0.0324,0.00132,0.875,0.0559,0.683,131.018,4,idm
+921445511,123456789,Shuzo's Favorite,6tEM4tpNAowmrZ2FRXKRql,alva noto,"Xerrox, Vol. 4",Xerrox Sans Retour,11,266200,False,0.186,0.253,2,-18.789,1,0.0374,0.159,0.866,0.0981,0.0274,90.204,3,idm
+921445511,123456789,Shuzo's Favorite,3pb6lOqe10g5OXtTyZA3Vb,Odd Shapes,Thousand Islands,Cruising Avenues,42,184007,False,0.651,0.354,1,-12.098,1,0.0977,0.222,0.446,0.336,0.481,136.029,3,study
+921445511,123456789,Shuzo's Favorite,7LGQcgWEdqTHJXufDvmGIP,Alison Krauss & Union Station,Live,"Cluck Old Hen - Live From The Louisville Palace, Kentucky / 2002",23,167733,False,0.456,0.897,2,-7.522,1,0.0343,0.0355,0.695,0.721,0.93,125.985,4,bluegrass
+921445511,123456789,Shuzo's Favorite,0IOQ3bRRkNZM4I2UIFuZEM,Os Barões Da Pisadinha,Batom de Ouro,Voltei Pra Vaquejada,41,136097,False,0.747,0.82,4,-6.197,0,0.05,0.484,0.0,0.0845,0.934,172.207,4,forro
+921445511,123456789,Shuzo's Favorite,2zOYO69UlD75QZeBXdET6S,Steve Rannazzisi,Breaking Dad,Space,22,309478,True,0.475,0.912,8,-5.561,1,0.949,0.855,0.0,0.649,0.198,76.945,4,comedy
+921445511,123456789,Shuzo's Favorite,6yIpsFkAVTkeJI0sKnlFdH,Nickel Creek,Why Should The Fire Die?,Scotch & Chocolate,26,187906,False,0.401,0.405,2,-10.542,1,0.0309,0.463,0.397,0.0749,0.441,154.447,4,bluegrass
+921445511,123456789,Shuzo's Favorite,3EkogSTYzk4eBx2zxOibzY,Soheil Soheili;Sina Shoaie,Re-listening Live in Cafe Baz,Complicated - Live,0,312000,False,0.55,0.509,1,-20.714,1,0.397,0.729,0.888,0.15,0.237,140.043,4,iranian
+921445511,123456789,Shuzo's Favorite,60hCNN9Gv8GIbVBb0B5Yfz,Havoc Brothers,Medicine,Medicine,45,304055,False,0.657,0.57,1,-8.207,0,0.0347,0.314,0.0624,0.12,0.215,81.511,4,malay
+921445511,123456789,Shuzo's Favorite,6CjyTuggpLFtW7jlTG3zBe,Rei Harakami,わすれもの,おかし,10,562066,False,0.525,0.774,8,-9.844,1,0.0609,0.331,0.909,0.14,0.707,170.892,4,idm
+921445511,123456789,Shuzo's Favorite,3v6ypsJzaoY2xgYp6mMJfM,!nvite,pagadoff,pagadoff,5,135860,False,0.784,0.657,11,-7.591,0,0.348,0.332,0.00362,0.131,0.501,84.997,4,study
+921445511,123456789,Shuzo's Favorite,782XmNYYIsazviVHr178sG,Nick Swardson,Taste It,I Felt Bad,22,450544,True,0.454,0.887,3,-6.785,0,0.932,0.715,0.0,0.624,0.175,83.881,3,comedy
+921445511,123456789,Shuzo's Favorite,7rp7NfjCrpKJeMSf96mLgs,Soheil Soheili,Noise à Noise 21.3,Mixed Feelings,0,160000,False,0.168,0.0584,7,-32.192,1,0.0464,0.944,0.85,0.0907,0.0377,68.544,5,iranian
+921445511,123456789,Shuzo's Favorite,5dutOOwYJB2O1e65QiSiuA,Léo Magalhães;Eduardo Costa,10 Anos Ao Vivo Em Goiânia,Aí o Homem Chora - Ao Vivo,43,194952,False,0.558,0.886,5,-3.343,1,0.052,0.0771,0.0,0.902,0.545,142.153,4,forro
+921445511,123456789,Shuzo's Favorite,1wbDSpBA0d36mgsE2QhrPM,The Steeldrivers,Bad For You,Glad I’m Gone,35,179186,False,0.555,0.696,7,-5.992,1,0.0298,0.599,7.24e-05,0.145,0.84,169.963,4,bluegrass
+921445511,123456789,Shuzo's Favorite,4KshtUhXYNBxqIlxntBuhE,Sujatha,Vinnukkum Mannukkum (Original Motion Picture Soundtrack),Unakkena Unakkena Piranthenae - Female Vocals,25,280080,False,0.825,0.475,0,-9.202,1,0.031,0.485,0.0,0.0949,0.595,119.906,4,malay
+921445511,123456789,Shuzo's Favorite,5ssIBX7G5TjUWEGyK6kZEP,Caninus,Now the Animals Have a Voice,Brindle Brickheads (Unprecedented Ferocity),12,117970,True,0.281,0.935,1,-4.437,1,0.0851,0.000491,0.267,0.144,0.297,156.74,4,grindcore
+921445511,123456789,Shuzo's Favorite,4slM9rHhOrzrHcMCWIXvzp,Mortician,Chainsaw Dismemberment,Tormented,18,86800,False,0.357,0.847,10,-10.278,1,0.0769,3.21e-06,0.962,0.191,0.215,125.101,3,grindcore
+921445511,123456789,Shuzo's Favorite,4WfslTUTDPIPpp33dh2R09,Mork,Det Svarte Juv,Mørkeleggelse,18,337634,False,0.442,0.961,8,-8.999,1,0.122,1.73e-05,0.807,0.12,0.0683,130.0,4,black-metal
+921445511,123456789,Shuzo's Favorite,4Tq67NoURP09ccbdMXka25,Greensky Bluegrass,All for Money,Courage for the Road,26,542587,False,0.341,0.553,0,-12.112,1,0.028,0.341,0.595,0.107,0.637,151.743,4,bluegrass
+921445511,123456789,Shuzo's Favorite,5FBToB2y0ie4fq3WjfsFFE,Sadness,I Want to Be There,I Want to Be with You,41,355474,False,0.144,0.466,5,-6.715,1,0.0522,0.686,0.423,0.0764,0.0737,87.29,4,black-metal
+921445511,123456789,Shuzo's Favorite,3g9wQIRTM3Svwe5X6vSwRv,Sachin Warrier,Thattathin Marayathu (Original Motion Picture Soundtrack),Thattathin Marayathe,52,152546,False,0.545,0.194,5,-13.134,1,0.0373,0.882,0.0,0.365,0.477,82.276,3,malay
+921445511,123456789,Shuzo's Favorite,2oNhpsAOtmxkVvy8qjDlVn,Iguinho e Lulinha,Simbora pra Vaquejada,Mexeu Comigo,53,166875,False,0.466,0.91,7,-3.892,1,0.0467,0.348,1.97e-06,0.613,0.548,133.02,4,forro
+921445511,123456789,Shuzo's Favorite,4FRQWmFWX7ABRXHl4reyHn,Roshan Jamrock;Arunraja Kamaraj,Bairavaa,Varlaam Varlaam Vaa,47,235224,False,0.706,0.938,1,-3.949,1,0.0727,0.0306,0.000198,0.25,0.931,134.988,4,malay
+921445511,123456789,Shuzo's Favorite,0dPAco4OZzeLwHQO6LnTaq,Bandit,Warsaw,Black Sand Beach,12,38493,True,0.334,0.995,7,-3.6,1,0.224,0.000585,0.00203,0.519,0.0677,132.456,4,grindcore
+921445511,123456789,Shuzo's Favorite,0jRdMXriTIWk0Bjr3ZSp49,Cadaveria,Horror Metal (Undead Edition),Flowers in Fire,18,411605,False,0.462,0.744,11,-8.118,0,0.0424,7.97e-05,0.0854,0.287,0.0621,134.063,4,black-metal
+921445511,123456789,Shuzo's Favorite,7afR9AuuXPIG2UPpyV1S9j,Crate Diggers,The Cat's Meow,Serene Flame,43,83200,False,0.619,0.259,2,-9.948,0,0.0478,0.128,0.881,0.0987,0.459,150.518,4,study
+921445511,123456789,Shuzo's Favorite,1WaalPyknH1yrntTgBHpRz,Jobii,A Merry Lofi Christmas,Navidad Bod,5,142914,False,0.424,0.506,6,-6.24,1,0.0873,0.112,0.557,0.111,0.551,131.946,3,study
+921445511,123456789,Shuzo's Favorite,58zBJP1aojko8RBJe2JhUy,Katie Hannigan,Feeling of Emptiness,Having Kids,24,96973,False,0.657,0.348,2,-11.913,1,0.954,0.835,0.0,0.74,0.598,92.443,3,comedy
+921445511,123456789,Shuzo's Favorite,23qdi1k76GHnWX9GOB2mKN,Nostalgique,Dr. Feelgood,Dr. Feelgood,9,73200,False,0.768,0.214,7,-12.023,0,0.251,0.041,0.926,0.104,0.46,79.992,4,study
+921445511,123456789,Shuzo's Favorite,1FTHcqxQ3B3FdTl9id6XlG,Push Button Objects,A Day in a Life,A Day in a Life,10,335186,False,0.604,0.743,10,-16.083,0,0.0394,0.0512,0.955,0.157,0.661,102.491,4,idm
+921445511,123456789,Shuzo's Favorite,43it2uOXLmBC0lHDAmWrU1,Almo X,Night Shift,Beach at Midnight,27,108148,False,0.634,0.215,0,-14.554,1,0.0354,0.759,0.913,0.109,0.123,80.942,4,study
+921445511,123456789,Shuzo's Favorite,0C9bpxaCCgDo3jnjzH8jfe,Mastruz Com Leite,"Tatuagem, Vol. 16",Tatuagem,39,216800,False,0.663,0.891,7,-5.163,1,0.0518,0.19,1.63e-06,0.115,0.943,187.804,4,forro
+921445511,123456789,Shuzo's Favorite,6dtGKLkb3KjWffRKNDfrYu,Lazy Leopard,Brooklyn,Brooklyn,47,113835,False,0.755,0.368,5,-12.653,1,0.172,0.117,0.839,0.0982,0.616,146.0,4,study
+921445511,123456789,Shuzo's Favorite,6UDqMsoPuUJGOwbJxoCnLB,Mortician,Darkest Day of Horror,Voodoo Curse,15,194306,False,0.257,0.879,10,-13.491,0,0.161,0.000258,0.0692,0.7,0.119,125.09,4,grindcore
+921445511,123456789,Shuzo's Favorite,67vdoE6kJhzrpzEmmq08gf,Timothy Infinite,Campsite Snoozin,Shleepy,19,155492,False,0.783,0.329,0,-9.091,1,0.0356,0.891,0.953,0.202,0.0703,141.986,4,study
+921445511,123456789,Shuzo's Favorite,0oRYUtAPV2riev1h34jMDU,GWS,Avashanai,Avashanai,19,202055,False,0.761,0.383,6,-13.798,0,0.0417,0.167,0.00152,0.105,0.216,132.113,4,malay
+921445511,123456789,Shuzo's Favorite,5jJKSuGdDgWNnJG3et4cVY,From The Vastland,Taurvi,"Taurvi, the Archdemon",6,398749,False,0.169,0.933,1,-3.981,1,0.113,1.53e-05,0.00436,0.176,0.0394,119.919,4,iranian
+921445511,123456789,Shuzo's Favorite,4TzepkpQAk3NtcD4I5wzMC,Todd Glass,Todd Glass Talks About Stuff,The Leisure Class,21,239280,True,0.536,0.927,4,-3.28,0,0.904,0.876,0.0,0.831,0.563,97.645,4,comedy
+921445511,123456789,Shuzo's Favorite,4GTDoorFd3XJcyvFkKvDEs,Sujatha,Hits of A.R.Rahman Isai Saral,"Sotta Sotta (From ""Taj Mahal"")",43,344816,False,0.751,0.414,5,-11.214,0,0.0406,0.145,0.000123,0.0841,0.401,94.991,4,malay
+921445511,123456789,Shuzo's Favorite,6utqqPs42IgihJOSaLGFuy,XERXES THE DARK,Tomb of Seers,Omniscient,5,487637,False,0.0816,0.197,2,-23.846,1,0.0403,0.475,0.865,0.0812,0.037,78.029,3,iranian
+921445511,123456789,Shuzo's Favorite,0w1Bmnum1Fk0Unjy5Ok2ov,Ensidya,Youth,Youth,51,144615,False,0.675,0.133,6,-10.8,1,0.0367,0.513,0.927,0.12,0.262,78.001,4,study
+921445511,123456789,Shuzo's Favorite,3d7i3jKVPe6zd5Bb0CDE5T,Tim O'Brien;Darrell Scott,Real Time,With A Memory Like Mine,22,251586,False,0.481,0.547,7,-8.763,0,0.0321,0.664,1.37e-05,0.131,0.751,138.953,4,bluegrass
+921445511,123456789,Shuzo's Favorite,1YeIfRzBJlQYH8tLzpUf00,Sajeer Koppam,Mazhamegham,Nee Mazhayayi,21,253535,False,0.519,0.457,6,-6.242,0,0.026,0.568,4.37e-05,0.149,0.327,110.036,4,malay
+921445511,123456789,Shuzo's Favorite,5rO3oZgdv5SMapky0bje0w,Alireza Mashayekhi,Happy Electronic Sounds,"Development II, OP. 24",0,302210,False,0.265,0.258,6,-13.136,1,0.12,0.778,0.0747,0.123,0.0693,107.599,4,iranian
+921445511,123456789,Shuzo's Favorite,2Hz70gAhvFwJvTahAtlaKm,Anenon,Tongue,Tongue,9,303750,False,0.471,0.652,5,-13.163,0,0.0621,0.708,0.894,0.0923,0.31,179.097,4,idm
+921445511,123456789,Shuzo's Favorite,2XWPMU0Wl1QESmqrOpipYx,Khold,Svartsyn,Manngard,18,203722,False,0.349,0.886,0,-13.266,1,0.0526,3.3e-06,0.0583,0.269,0.0808,145.0,4,black-metal
+921445511,123456789,Shuzo's Favorite,4Exgmaay4ePMcaHu2nu5cE,Jeff Foxworthy,We've Been Thinking,Kidney Stones,28,627166,False,0.634,0.826,3,-11.228,0,0.946,0.75,0.0,0.752,0.334,111.984,3,comedy
+921445511,123456789,Shuzo's Favorite,5IErjtqLHmGOYE7vzpO3DY,Pablo;Tierry,Vem de Kombi,Vem de Kombi,48,177954,False,0.737,0.623,8,-4.67,1,0.0504,0.193,0.0,0.117,0.739,131.993,4,forro
+921445511,123456789,Shuzo's Favorite,7qpPZcSLlr1jJKpSeHzwB6,Eugene Mirman,An Evening of Comedy in a Fake Underground Laboratory,Christian Mingle and My Childhood Notebook,20,374506,True,0.555,0.927,1,-5.424,1,0.907,0.765,0.0,0.799,0.395,80.742,3,comedy
+921445511,123456789,Shuzo's Favorite,6B4ltiHFcVWHALJpO2pswJ,The Devil Makes Three,Do Wrong Right,Johnson Family,25,287506,False,0.505,0.525,11,-8.732,0,0.0369,0.623,1.09e-05,0.135,0.745,179.874,3,bluegrass
+921445511,123456789,Shuzo's Favorite,5GkpWNTA6Fb9v4VMjUBaDI,Alphaxone,Living in the Grayland,Interface,9,251533,False,0.104,0.389,2,-24.105,1,0.115,0.579,0.866,0.109,0.0375,82.255,5,iranian
+921445511,123456789,Shuzo's Favorite,4ZU3AweOcPab9QFEp3M2ih,Full Of Hell,Full of Hell & Merzbow,Humming Miter,16,43795,False,0.0679,0.997,7,-4.135,0,0.0973,1.48e-06,0.957,0.13,0.0205,179.164,4,grindcore
+921445511,123456789,Shuzo's Favorite,3c6wzCjrv3Vx2Y0WFmqVME,alva noto,Univrs,Uni Rec,10,452173,False,0.42,0.317,10,-14.851,0,0.0951,0.00313,0.808,0.11,0.0331,171.705,5,idm
+921445511,123456789,Shuzo's Favorite,2MWyE6Zq6pZREZGNxz27vz,Terrorizer,World Downfall (Full Dynamic Range Edition),Ripped to Shreds,14,170068,False,0.323,0.932,9,-14.037,1,0.108,1.18e-05,0.915,0.0504,0.0391,108.002,4,grindcore
+921445511,123456789,Shuzo's Favorite,3XmR00zDD7XdcufivYmzTe,Job Kurian;Vidhu Prathap;Navas;Soorya Narayanan;Sithara Krishnakumar,Hits of Job Kurien,"Hey Neela Vaan - From ""Ayal Njanalla""",20,314729,False,0.662,0.578,0,-9.185,1,0.0366,0.598,0.000442,0.123,0.503,90.009,4,malay
+921445511,123456789,Shuzo's Favorite,0OHP6pMVDUhNwl6u9hP3oK,Tim Wilson,Church League Softball Fistfight,Church League Softball Fistfight,25,111360,False,0.635,0.697,0,-1.28,1,0.0509,0.748,0.0,0.252,0.826,119.565,4,comedy
+921445511,123456789,Shuzo's Favorite,2rXjy3by0nsxQsulTj8hJd,Kelpe,Ex-Aquarium,Yippee Space Ghost,11,327480,False,0.717,0.533,5,-8.382,0,0.0364,0.111,0.844,0.302,0.287,102.981,4,idm
+921445511,123456789,Shuzo's Favorite,0nQFwBF8rgQYI1XpVZO26L,ADK Srirascol;Teejay,Vellai Poove,Vellai Poove,41,262446,False,0.452,0.732,10,-5.748,1,0.0665,0.422,0.0,0.178,0.295,79.414,4,malay
+921445511,123456789,Shuzo's Favorite,0tf6nQ7JX4nTTLPL75LMoN,Confess,Beginning of Dominion,Fly Without Wings...,0,66000,False,0.421,0.419,1,-10.049,0,0.0368,0.622,0.968,0.192,0.0637,97.986,4,iranian
+921445511,123456789,Shuzo's Favorite,6ArkYTdAIXy2wlFpNVXE63,Cattle Decapitation,The Harvest Floor,The Harvest Floor,15,187360,False,0.347,0.342,4,-15.855,1,0.0362,0.389,0.79,0.117,0.0343,133.702,3,grindcore
+921445511,123456789,Shuzo's Favorite,2dPWIhmf2ZEpibLjPtLBMb,Greensky Bluegrass,Stress Dreams,Screams,25,257514,False,0.588,0.534,9,-12.527,0,0.0271,0.458,0.0635,0.492,0.492,114.082,4,bluegrass
+921445511,123456789,Shuzo's Favorite,0KTE42CfNdxyAXD6VUpypM,Burzum,Thulean Mysteries,Thulean Mysteries,19,261549,False,0.0791,0.097,7,-21.318,1,0.0433,0.985,0.983,0.108,0.0305,61.086,5,black-metal
+921445511,123456789,Shuzo's Favorite,4l0672Xtog84LeSriHmgnp,Napalm Death,Diatribes,Diatribes,12,231706,False,0.291,0.963,8,-7.258,1,0.133,0.000122,0.701,0.172,0.308,102.351,4,grindcore
+921445511,123456789,Shuzo's Favorite,1W82dIPz5K8vpOXY8GfJzm,Limão Com Mel,"Limão com Mel, Vol. 3",De Janeiro a Janeiro,47,246400,False,0.674,0.836,0,-7.072,1,0.0328,0.0816,3.19e-05,0.109,0.901,114.943,4,forro
+921445511,123456789,Shuzo's Favorite,5Q7Oe0YG9SCy7bqyX8TVfS,Rachel Feinstein,Only Whores Wear Purple,My Mom at a Latin Restaurant,23,284426,True,0.565,0.823,11,-6.347,1,0.889,0.801,0.0,0.691,0.423,84.147,4,comedy
+921445511,123456789,Shuzo's Favorite,7bQBXiL4dGxZNN6lLSjgP6,Kyson,Lucky Notes,Run,0,174051,False,0.646,0.418,7,-8.44,1,0.0465,0.434,0.00475,0.107,0.198,120.022,4,idm
+921445511,123456789,Shuzo's Favorite,3oITINMgPGsnvA3Wv3ZHGe,Imperialist,Cipher,Mercurian Dusk,20,353402,False,0.214,0.993,11,-5.084,1,0.216,2.06e-06,0.783,0.229,0.0376,116.622,4,black-metal
+921445511,123456789,Shuzo's Favorite,7IczW3b0Y26Dez2SCHdnU3,Tom Cotter,Wise Ass,Liquored Up,21,261800,False,0.625,0.917,1,-6.109,1,0.757,0.775,0.0,0.916,0.623,106.335,5,comedy
+921445511,123456789,Shuzo's Favorite,0guLMndIOglxZ7h5CWmBSf,Capitalist Casualties,Split,Irukandji,14,58080,False,0.22,0.945,9,-4.63,0,0.0959,3.4e-06,0.929,0.111,0.604,143.208,3,grindcore
+921445511,123456789,Shuzo's Favorite,0kYxGkYQwIW9TY7L4DOB00,Alphaxone;Dronny Darko,Forsaken,Dissolution of Thought,6,297521,False,0.161,0.297,5,-25.731,0,0.0572,0.91,0.897,0.102,0.0387,108.598,3,iranian
+921445511,123456789,Shuzo's Favorite,3s4C04qJtfECfRnZ8ds8wi,No/Más,Consume / Deny / Repent,Sudor Frío,13,116908,False,0.307,0.988,9,-3.101,1,0.207,1.68e-05,0.562,0.198,0.0695,119.772,4,grindcore
+921445511,123456789,Shuzo's Favorite,5b0Opn1XtWaqN70sXm8uJk,Jobii,Flakes,"Sorry, Jorge",26,126521,False,0.822,0.304,2,-7.642,0,0.0487,0.502,0.862,0.112,0.221,91.992,3,study
+921445511,123456789,Shuzo's Favorite,5tx1rwnQZEm5E2Bf01jGA8,G:sson,Clogs And Pods,Clogs And Pods,36,148935,False,0.654,0.327,6,-10.915,0,0.0682,0.0133,0.737,0.261,0.151,148.142,4,study
+921445511,123456789,Shuzo's Favorite,0ELwNEshcw9E3EQwPPtsFQ,Deterioration,Punish the Betrayer,Life Rejector,23,87941,False,0.449,0.654,10,-14.418,1,0.0841,0.41,0.15,0.208,0.144,94.488,4,grindcore
+921445511,123456789,Shuzo's Favorite,0ie5YnVn9vFcO4tDJbqLS0,Silvanno Salles,Volume 22,Apelido Carinhoso,43,210573,False,0.724,0.812,7,-3.502,0,0.0426,0.62,0.0,0.128,0.866,139.096,4,forro
+921445511,123456789,Shuzo's Favorite,4vK7YxgpYLEU97fA3M3EeI,Watain,The Wild Hunt,They Rode On,43,522813,False,0.295,0.44,4,-9.151,0,0.0314,4.16e-05,0.498,0.0811,0.039,133.988,3,black-metal
+921445511,123456789,Shuzo's Favorite,0QDROVQXDVdoM8WMuYRnyD,Old Crow Medicine Show,Carry Me Back,Levi,32,170186,False,0.501,0.731,7,-6.135,1,0.0385,0.304,0.0,0.0661,0.879,201.077,4,bluegrass
+921445511,123456789,Shuzo's Favorite,5DBzcRQ2Gdj5ID4Bk9z3Vw,Keller & The Keels,Thief,Don't Cuss the Fiddle,27,273413,False,0.543,0.524,0,-8.893,1,0.0333,0.704,0.0018,0.117,0.68,124.808,4,bluegrass
+921445511,123456789,Shuzo's Favorite,4H2GYxGRMKTsbDRzcjbjCp,End It,One Way Track,One Way Track,30,135530,False,0.244,0.939,2,-3.156,1,0.126,0.000255,0.699,0.343,0.394,177.634,4,black-metal
+921445511,123456789,Shuzo's Favorite,2TelKKmeNMptJRyHE9BhEx,Edson Lima e Gatinha Manhosa,20 Grandes Sucessos: A Voz de Quem Te Ama,O Inverno Acabou,44,211973,False,0.379,0.897,2,-1.312,1,0.0761,0.138,0.0,0.363,0.426,188.858,4,forro
+921445511,123456789,Shuzo's Favorite,1qefzvC04Xnwloxf62HdZy,K. G. Markose,Nirakoottu (Original Motion Picture Soundtrack),Poomaaname - Male Version,24,269720,False,0.486,0.444,1,-8.317,0,0.0288,0.844,0.0274,0.164,0.707,106.817,4,malay
+921445511,123456789,Shuzo's Favorite,3Ny9J2c1beLVf3lETydYan,Manger Cadavre?,AntiAutoAjuda,Fracasso,12,107106,False,0.209,0.801,1,-8.36,1,0.084,5.58e-05,0.936,0.134,0.506,174.701,4,grindcore
+921445511,123456789,Shuzo's Favorite,7GGy6RZUaVqioVZyEGLyAE,Asspera,Pija,Pogo al Corazon,24,304480,True,0.49,0.984,3,-3.711,1,0.0912,0.00057,0.611,0.111,0.395,130.001,4,heavy-metal
+921445511,123456789,Shuzo's Favorite,2eo3SFdWW5c0jadbj79MJR,Psirico;Os Barões Da Pisadinha,Sigilinho,Sigilinho,44,216729,False,0.738,0.815,11,-4.228,0,0.0467,0.546,0.0,0.366,0.814,156.895,4,forro
+921445511,123456789,Shuzo's Favorite,0JEDSpqbQbXdPByUCUpRrb,Mile Twelve,City on a Hill,Jericho,23,258252,False,0.361,0.303,7,-11.433,1,0.0378,0.787,0.0,0.0945,0.43,172.573,3,bluegrass
