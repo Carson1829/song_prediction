@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[times, twocolumn]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{subcaption}
 \usepackage{amsmath}
@@ -8,9 +8,10 @@
 \usepackage{comment}
 \usepackage[a4paper, total={7in, 9in}]{geometry}
 \usepackage{biblatex}
+
 \addbibresource{mybib.bib}
 
-\title{Recommender System}
+\title{Genre Classification}
 \author{Nabeha Barkatullah, Mia Striebeck, Laksha Karthikeyan, Carson Chiem, Shuzo Naruse}
 \date{May 20, 2024}
 
@@ -18,14 +19,15 @@
 \maketitle
 
 \newpage
+% abstract
 \begin{abstract}
     [Include Abstract]
 \end{abstract}
 \section{Introduction}
 Discovering new music that fits within your music taste is time-consuming and difficult. On top of there being an abundance of music to sift through, finding songs from the bulk that you actually enjoy listening to can go either way. With this project, we aim to utilize a Spotify dataset to build a model to classify songs under genres, with the potential of being part of a song recommendation system. Using the attributes from the dataset, such as the relevant music listening patterns and classification of songs, we will predict the genre a song falls under. Our goal is to build a classification model that predicts a song’s genre based on user-inputted track features.
-
+% background
 \section{Background}
-
+%literature review
 \section{Literature Review}
 
 \section{Dataset Description and Modeling Approach}
@@ -36,24 +38,29 @@ The main purpose of Exploratory Data Analysis (EDA) is to help look at data befo
 
 \subsection{Visualizing the Dataset}
 Creating distributions of the data can help visualize whether the data is skewed such as towards a gender or age group, as skewness can lead to biased parameter estimates or inaccurate predictions.
+
+% adding Figure 1 - image of feature distributions
 \begin{figure}[H]
     \centering
     \begin{minipage}{1\textwidth}
-        \includegraphics[width=\linewidth]{EDA.png}
+        \includegraphics[width=0.5\textwidth]{feature_dists.png}
         \caption{Caption}
-        \label{graph:EDA}
+        \label{graph:dists}
     \end{minipage}%
 \end{figure}
-As shown in Figure \ref{graph:EDA}, the danceability and tempo have nearly normal distributions. The loudness, acousticness, speechiness, liveliness are skewed, with loudness being left-skewed and the rest being right-skewed. For popularity, if the songs with the value 0 are taken out, the distribution would almost be normal. Also, energy has an increasing distribution.
 
+As shown in Figure \ref{graph:dists}, the danceability and tempo have nearly normal distributions. The loudness, acousticness, speechiness, liveliness are skewed, with loudness being left-skewed and the rest being right-skewed. For popularity, if the songs with the value 0 are taken out, the distribution would almost be normal. Also, energy has an increasing distribution.
+
+% adding Figure 2 - boxplots
 \begin{figure}[H]
     \centering
     \begin{minipage}{1\textwidth}
-        \includegraphics[width=\linewidth]{Boxplots.png}
+        \includegraphics[width=0.5\textwidth]{feat_boxplots.png}
         \caption{Caption}
         \label{Boxplots}
     \end{minipage}%
 \end{figure}
+
 Box Plots can also be used to visualize skewed data and identify outliers.
 The box plots in Figure \ref{Boxplots} map the distributions for ...\\
 - acousticness, energy and valence have no outliers\\
@@ -63,15 +70,7 @@ It's also good to note the absence of outliers, as the presence of outliers may 
 \subsection{Feature Selection} Feature selection is the process of choosing the most relevant features to use in our machine learning algorithm. The main goal of feature selection is to improve the performance of a predictive model while also reducing the computational cost of modeling.\\
 
 One way to go about choosing relevant features is by using the Filter Method~\cite{HeavyAI}. The Filter Method can be used to filter out the features and take only a relevant subset of features~\cite{HeavyAI}. We employed Pearson's Correlation Coefficient (\ref{eq:pearson}) and Spearman's Correlation Coefficient (\ref{eq:spearman}) to determine the correlations between features and lung cancer severity.\\
-\begin{figure}[H]
-    \centering
-    \textbf{Correlation Between Features and Severity}
-    \begin{minipage}{0.7\textwidth}
-        \includegraphics[width=\linewidth]{CorrFilterMat189.png}
-        \caption{Correlation strengths and directions between features and lung cancer severity levels. Linear correlation coefficients were calculated using Pearson's Correlation Coefficient, while non-linear correlation coefficients were calculated using Spearman's Correlation Coefficient. Features lying above the red line indicate correlations higher than 0.5 in absolute value, highlighting the most relevant features for predictive modeling and treatment strategies.}
-        \label{table:rel_feats}
-    \end{minipage}%
-\end{figure}
+
 
 In examining the correlation coefficients between the various features and lung cancer severity levels in Figure \ref{table:rel_feats}, we aim to identify the \\
 
@@ -81,7 +80,7 @@ In addition to understanding the correlations between the features and music gen
     \begin{minipage}{1\textwidth}
         \centering
         \textbf{Pearson's Correlation Heatmap of Relevant Features}
-        \includegraphics[width=\linewidth]{CorrMapMAT189.png}
+        \includegraphics[width=0.5\linewidth]{corr_heatmap.png}
         \caption{The Pearson's correlation heatmap depicts the pairwise correlations between the 13 relevant features identified through the Filter Method. Each cell in the heatmap represents the correlation coefficient between two features, ranging from -1 to 1. A value close to 1 indicates a strong positive correlation, while a value close to -1 suggests a strong negative correlation. A correlation of 0 indicates no linear relationship between the features. This heatmap provides insights into the interplay between different features, guiding feature selection and model interpretation.}
         \label{heatmap}
     \end{minipage}%
@@ -103,5 +102,6 @@ Based on our exploratory data analysis, we determined that the relevant features
 \section{Conclusion}
 
 \printbibliography
+
 
 \end{document}
