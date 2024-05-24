@@ -11,7 +11,7 @@
 
 \addbibresource{mybib.bib}
 
-\title{Genre Classification}
+\title{Spotify Tracks Genre Classification}
 \author{Nabeha Barkatullah, Mia Striebeck, Laksha Karthikeyan, Carson Chiem, Shuzo Naruse}
 \date{May 20, 2024}
 
@@ -42,11 +42,9 @@ Creating distributions of the data can help visualize whether the data is skewed
 % adding Figure 1 - image of feature distributions
 \begin{figure}[H]
     \centering
-    \begin{minipage}{1\textwidth}
-        \includegraphics[width=0.5\textwidth]{feature_dists.png}
-        \caption{Caption}
-        \label{graph:dists}
-    \end{minipage}%
+    \includegraphics[width=0.55\textwidth]{feature_dists.png}
+    \caption{Caption}
+    \label{graph:dists}
 \end{figure}
 
 As shown in Figure \ref{graph:dists}, the danceability and tempo have nearly normal distributions. The loudness, acousticness, speechiness, liveliness are skewed, with loudness being left-skewed and the rest being right-skewed. For popularity, if the songs with the value 0 are taken out, the distribution would almost be normal. Also, energy has an increasing distribution.
@@ -54,11 +52,9 @@ As shown in Figure \ref{graph:dists}, the danceability and tempo have nearly nor
 % adding Figure 2 - boxplots
 \begin{figure}[H]
     \centering
-    \begin{minipage}{1\textwidth}
-        \includegraphics[width=0.5\textwidth]{feat_boxplots.png}
-        \caption{Caption}
-        \label{Boxplots}
-    \end{minipage}%
+    \includegraphics[width=0.5\textwidth]{feat_boxplots.png}
+    \caption{Caption}
+    \label{Boxplots}
 \end{figure}
 
 Box Plots can also be used to visualize skewed data and identify outliers.
@@ -77,13 +73,11 @@ In examining the correlation coefficients between the various features and lung 
 In addition to understanding the correlations between the features and music genre or idk, it's important to understand the correlations \textit{between} the features in building accurate models. Correlations between features provide insights into how the variables in the dataset interact with each other, which can guide feature selection, model construction, and interpretation of results. While strong correlations between features may indicate redundancy or multicollinearity*, leading to potential model instability or overfitting, they can also highlight important relationships that contribute to the predictive power of the model. Therefore, it is essential to examine the feature correlations for making informed decisions about whether to keep or remove features based on the specific context of the ML problem and the goals of the analysis.\\
 
 \begin{figure}[H]
-    \begin{minipage}{1\textwidth}
-        \centering
-        \textbf{Pearson's Correlation Heatmap of Relevant Features}
-        \includegraphics[width=0.5\linewidth]{corr_heatmap.png}
-        \caption{The Pearson's correlation heatmap depicts the pairwise correlations between the 13 relevant features identified through the Filter Method. Each cell in the heatmap represents the correlation coefficient between two features, ranging from -1 to 1. A value close to 1 indicates a strong positive correlation, while a value close to -1 suggests a strong negative correlation. A correlation of 0 indicates no linear relationship between the features. This heatmap provides insights into the interplay between different features, guiding feature selection and model interpretation.}
-        \label{heatmap}
-    \end{minipage}%
+    \centering
+    \textbf{Pearson's Correlation Heatmap of Relevant Features}
+    \includegraphics[width=1.0\linewidth]{corr_heatmap.png}
+    \caption{The Pearson's correlation heatmap depicts the pairwise correlations between the 13 relevant features identified through the Filter Method. Each cell in the heatmap represents the correlation coefficient between two features, ranging from -1 to 1. A value close to 1 indicates a strong positive correlation, while a value close to -1 suggests a strong negative correlation. A correlation of 0 indicates no linear relationship between the features. This heatmap provides insights into the interplay between different features, guiding feature selection and model interpretation.}
+    \label{heatmap}
 \end{figure}
 
 Despite observing both weak and strong correlations among the 13 features in Figure \ref{heatmap}, words.
