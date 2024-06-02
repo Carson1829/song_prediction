@@ -29,16 +29,14 @@ Discovering new music that fits within your music taste is time-consuming and di
 \section{Background}
 %literature review
 \section{Literature Review}
+\newpage
+\section{Dataset Description and EDA}
+\subsection{Dataset Description}
+The selected Kaggle dataset contains data on Spotify songs from over 125 genres, with each song having associated features related to identification of each track, audio characteristics, or popularity and genre classifications. The original set contained around 114k data points (songs) condensed in a CSV format, with 20 features, which are track id, artist name, album name, track name, popularity, duration (ms), explicit, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, and time signature. Popularity is the ranking of each song on a scale of 1 to 100, duration of the track is in milliseconds (ms), explicit indicates if a song contains explicit lyrics or not, represented respectively as true or false, danceability is a measure, from 0 to 1, of how a song is considered appropriate for dancing, energy is a measure, from 0 to 1, of intensity, key is in regards to overall musical pitch, loudness is measured overall in decibels (dB), mode indicates if the track is on a major or minor scale (1 or 0), speechiness measures, from 0 to 1, the level of spoken words in a track, acousticness is a measure, from 0 to 1, of instruments used without electrical amplification, instrumentalness is a measure, from 0 to 1, of a track containing vocals, liveness is the likelihood of a song being performed in front of an audience, valence measures the interpretation of a song as positive or negative, tempo is the speed of a track, measured in beats per minute (BPM), and time signature indicates the number of beats in each measure of the piece. All are continuous variables, except for track id, artist name, album name, track name, explicit, popularity and track genre, which are categorical. Popularity in particular is ordinal categorical, as tracks are assigned a ranking of popularity. 
 
-\section{Dataset Description and Modeling Approach}
-The selected Kaggle dataset contains data on Spotify songs from over 125 genres, with each song having associated characteristics. This set contains around 114k data points condensed in a CSV format, with 20 features. These features are related to track identification, classification, and characteristics of the track (ie: tempo and time signature). In full, the features are track id, artists, album name, track name, popularity, duration (ms), explicit, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, time signature, and track genre.
-
-\section{Exploratory Data Analysis}
-The main purpose of Exploratory Data Analysis (EDA) is to help look at data before making any assumptions. It can help identify obvious errors, better understand patterns within the data, detect outliers, or find interesting relations among the variables.
-
-\subsection{Visualizing the Dataset}
-Creating distributions of the data can help visualize whether the data is skewed such as towards a gender or age group, as skewness can lead to biased parameter estimates or inaccurate predictions.
-
+In pre-processing the data, we checked for duplicate rows and missing values. 32,656 rows were dropped, as they were each identified as having the same track name and artist as an another track. The remaining rows of distinct tracks were filtered to identify missing values for each feature, which identified one track having 3 missing values. Furthermore, the genre feature in the original dataset contained 125 categories, however, as many genres were more specific sub-genres, we grouped these sub-genres under their respective overall genres. For instance, tracks with the sub-genres "emo," "punk," and "garage," were all re-classified under the genre "punk-rock." This allowed for greater accuracy of genre classification, with reduced complexity and risk of overfitting, as the model would be less likely to fit too closely to the data of these more specific sub-genres which also have small sample sizes. The dataset was ultimately filtered to only contain the 10 most popular genres, removing the rows of all other genres. Thus, as the duplicate rows, the one row with a missing value and the rows not a part of the top 10 genres were dropped, the resulting cleaned dataset contained 81,344 rows of distinct tracks.
+\subsection{Exploratory Data Analysis}
+As shown in Figure \ref{graph:dists}, the danceability and tempo have nearly normal distributions. The distribution of loudness is left-skewed while acousticness, speechiness, liveliness are right-skewed. This signifies that while most of the songs in this dataset are moderately loud, there are some that have particularly low levels of loudness, that makes the distribution skew to the right. Similarly, acousticness, speechiness and liveliness For popularity, if the songs with the value 0 are taken out, the distribution would almost be normal. Also, energy has an increasing distribution.
 % adding Figure 1 - image of feature distributions
 \begin{figure}[H]
     \centering
@@ -46,8 +44,6 @@ Creating distributions of the data can help visualize whether the data is skewed
     \caption{Caption}
     \label{graph:dists}
 \end{figure}
-
-As shown in Figure \ref{graph:dists}, the danceability and tempo have nearly normal distributions. The loudness, acousticness, speechiness, liveliness are skewed, with loudness being left-skewed and the rest being right-skewed. For popularity, if the songs with the value 0 are taken out, the distribution would almost be normal. Also, energy has an increasing distribution.
 
 % adding Figure 2 - boxplots
 \begin{figure}[H]
@@ -57,18 +53,9 @@ As shown in Figure \ref{graph:dists}, the danceability and tempo have nearly nor
     \label{Boxplots}
 \end{figure}
 
-Box Plots can also be used to visualize skewed data and identify outliers.
-The box plots in Figure \ref{Boxplots} map the distributions for ...\\
-- acousticness, energy and valence have no outliers\\
-- all of the other features have many outliers which makes sense since they are features that describe a song and are thus useful and should be kept to keep the diversity of the songs in the dataset\\
+Box plots were also used to visualize skewed data and identify outliers. The box plots in Figure \ref{Boxplots} map the distributions for the ordinal categorical predictor variable popularity, and all the continuous predictor variables, duration, tempo, loudness, acousticness, danceability, energy, instrumentalness, liveliness, speechiness and valence. From this visualization, it is evident that acousticness, energy and valence have no outliers, while the other features do. The presence of outliers is reasonable as it merely shows the diversity of the songs in our dataset, and ultimately, the variety in levels of these features is what characterizes the different music styles that allow a song to be categorized under a certain genre.
+
 It's also good to note the absence of outliers, as the presence of outliers may cause problems during model fitting. Since our data is clean, we can better avoid inflated error metrics that can significantly impact model performance by skewing parameter estimates.
-
-\subsection{Feature Selection} Feature selection is the process of choosing the most relevant features to use in our machine learning algorithm. The main goal of feature selection is to improve the performance of a predictive model while also reducing the computational cost of modeling.\\
-
-One way to go about choosing relevant features is by using the Filter Method~\cite{HeavyAI}. The Filter Method can be used to filter out the features and take only a relevant subset of features~\cite{HeavyAI}. We employed Pearson's Correlation Coefficient (\ref{eq:pearson}) and Spearman's Correlation Coefficient (\ref{eq:spearman}) to determine the correlations between features and lung cancer severity.\\
-
-
-In examining the correlation coefficients between the various features and lung cancer severity levels in Figure \ref{table:rel_feats}, we aim to identify the \\
 
 In addition to understanding the correlations between the features and music genre or idk, it's important to understand the correlations \textit{between} the features in building accurate models. Correlations between features provide insights into how the variables in the dataset interact with each other, which can guide feature selection, model construction, and interpretation of results. While strong correlations between features may indicate redundancy or multicollinearity*, leading to potential model instability or overfitting, they can also highlight important relationships that contribute to the predictive power of the model. Therefore, it is essential to examine the feature correlations for making informed decisions about whether to keep or remove features based on the specific context of the ML problem and the goals of the analysis.\\
 
@@ -76,25 +63,27 @@ In addition to understanding the correlations between the features and music gen
     \centering
     \textbf{Pearson's Correlation Heatmap of Relevant Features}
     \includegraphics[width=1.0\linewidth]{corr_heatmap.png}
-    \caption{The Pearson's correlation heatmap depicts the pairwise correlations between the 13 relevant features identified through the Filter Method. Each cell in the heatmap represents the correlation coefficient between two features, ranging from -1 to 1. A value close to 1 indicates a strong positive correlation, while a value close to -1 suggests a strong negative correlation. A correlation of 0 indicates no linear relationship between the features. This heatmap provides insights into the interplay between different features, guiding feature selection and model interpretation.}
+    \caption{The Pearson's correlation heatmap depicts the pairwise correlations between the 11 features that are relevant to the characteristics of each track. Each cell in the heatmap represents the correlation coefficient between two features, ranging from -1 to 1. A value close to 1 indicates a strong positive correlation, while a value close to -1 suggests a strong negative correlation. A correlation of 0 indicates no linear relationship between the features. This heatmap provides insights into the interplay between different features, guiding feature selection and model interpretation.}
     \label{heatmap}
 \end{figure}
 
 Despite observing both weak and strong correlations among the 13 features in Figure \ref{heatmap}, words.
 
-\section{Model Construction}
-Based on our exploratory data analysis, we determined that the relevant features that are potentially useful in predicting lung cancer severity are air pollution, alcohol use, dust allergy, occupational hazards, genetic risk, chronic lung disease, balanced diet, obesity, smoking, passive smoker, chest pain, coughing of blood, and fatigue. These factors will become the inputs (X) of our predictive model.
+\section{Proposed Methodology}
+In order to build a classification model to classify the genre of a track based on the predictor variables related to audio characteristics, our modeling approach entailed identifying techniques that would work well for multi-class classification, as our dataset contains multiple possible genres. We examined the performance of K-means clustering and Random Forest models.
 
-\section{Results}
+\section{Experimental Results and Evaluation}
 \subsection{Model Performances}
-
 
 \subsection{Model Implications}
 
-\section{Discussion}
-
 \section{Conclusion}
 
+\section{Discussion}
+
+\section{Github link and Project Roadmap}
+
+\section{Works Cited}
 \printbibliography
 
 
