@@ -117,16 +117,16 @@ The full results are presented in Table \ref{table:result}.
 \begin{table}
     \begin{center}
         \begin{tabular}{|c||c|c|c|c|c|} \hline
-            $n_{neighbors}$ & accuracy & precision & recall & f1
-            \\ \hline
-            20  & 0.5299 & 0.5248 & 0.5221 & 0.5213 \\
-            40  & 0.5353 & 0.5315 & 0.5244 & 0.5254 \\
-            60  & 0.5355 & 0.5324 & 0.5227 & 0.5246 \\
-            80  & 0.5347 & 0.5320 & 0.5203 & 0.5228 \\
-            100 & 0.5342 & 0.5317 & 0.5187 & 0.5215 \\
+           $n$ & accuracy & precision & recall & f1 & time   \\
+           \hline
+            20  & 0.5299 & 0.5248 & 0.5221 & 0.5213 & 98.71  \\
+            40  & 0.5353 & 0.5315 & 0.5244 & 0.5254 & 116.67 \\
+            60  & 0.5355 & 0.5324 & 0.5227 & 0.5246 & 130.93 \\
+            80  & 0.5347 & 0.5320 & 0.5203 & 0.5228 & 143.82 \\
+            100 & 0.5342 & 0.5317 & 0.5187 & 0.5215 & 151.74 \\
             \hline
         \end{tabular}
-        \caption{Results for different $n_{neighbors}$. \textit{precision\_macro}, \textit{recall\_macro}, and \textit{f1\_macro} are the macro-averages, respectively.}
+        \caption{Results for different $n_{neighbors}$. \textit{precision}, \textit{recall}, and \textit{f1} are the macro-averages, respectively.}
         \label{table:result}
     \end{center}
 \end{table}
@@ -212,10 +212,10 @@ The results show that as the value of $t$ increases, the Top K Accuracy consiste
     \item As $t$ increases beyond 3, the Weighted Accuracy decreases, highlighting the trade-off between including more potential genres and maintaining prediction specificity.
 \end{itemize}
 
-These findings underscore the importance of selecting an optimal value for $t$ that balances accuracy and specificity in genre prediction tasks.
+These findings underscore the importance of selecting an optimal value for $t$ that balances accuracy and specificity in genre prediction tasks. Certainly, changing the type and parameters of the weight function will change the optimal $t$, but exponential weights, where the decay in accuracy increases as $t$ increases, are suitable, and the value $t=3$ seems reasonable.
 
 \section{Conclusion}
-The model demonstrates stable performance across different values of $n_{neighbors}$, indicating its robustness in genre classification tasks. However, despite this stability, the overall performance remains relatively low, suggesting the need for further improvements.
+The model demonstrates stable performance across different values of $n_{neighbors}$, indicating its robustness in genre classification tasks. However, despite this stability, the overall performance remains relatively low, suggesting the need for further improvements. 
 
 Based on the analysis, \verb|n_neighbors| = 60 was determined to be the optimal number of neighbors for the KNN model. Precision (macro) peaks at \verb|n_neighbors| = 60, while recall and F1 score peak at \verb|n_neighbors| = 40. Accuracy also peaks at \verb|n_neighbors| = 60. Although recall and F1 score peak at a different value, the nature of the genre classification task suggests that false negatives (FN) have a smaller impact. Therefore, higher precision is prioritized in this context. Given that precision (macro) peaks at \verb|n_neighbors| = 60, this value is considered the optimal setting for the KNN model in this study.
 
