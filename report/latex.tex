@@ -59,7 +59,7 @@ Figure \ref{graph:dists} shows frequency distributions of the features, showing 
 % adding Figure 1 - image of feature distributions
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.55\textwidth]{feature_dists.png}
+    \includegraphics[width=0.55\textwidth]{report_pics/feature_dists_new.png}
     \caption{Frequency distributions of the continuous track features, which have been scaled using z-score normalization.}
     \label{graph:dists}
 \end{figure}
@@ -68,7 +68,7 @@ Box plots were used to further examine the distributions and identify outliers, 
 % adding Figure 2 - boxplots
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth, height=10cm]{feat_boxplots.png}
+    \includegraphics[width=0.5\textwidth, height=10cm]{report_pics/feat_boxplots_new.png}
     \caption{Box plots depicting the distributions of the continuous features in our dataset, scaled using z-score normalization.}
     \label{Boxplots}
 \end{figure}
@@ -76,7 +76,7 @@ Figure \ref{heatmap} displays the correlations between the continuous predictor 
 \begin{figure}[H]
     \centering
     \textbf{Pearson's Correlation Heatmap of Relevant Features}
-    \includegraphics[width=1.0\linewidth]{corr_heatmap.png}
+    \includegraphics[width=1.0\linewidth]{report_pics/corr_heatmap_new.png}
     \caption{The Pearson's correlation heatmap depicts the pairwise correlations between the 11  continuous features that are relevant to the characteristics of each track, where a value less than 0 indicates negative correlation, and a value greater than 0 indicates positive correlations between the features.}
     \label{heatmap}
 \end{figure}
@@ -86,7 +86,7 @@ Figure \ref{top10} depicts the 10 most frequent artists and the top 10 most freq
 % adding Figure 4 - top 10 most frequent
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{top_10.png}
+    \includegraphics[width=0.5\textwidth]{report_pics/top_genres.png}
     \caption{Top 10 artists and genres}
     \label{top10}
 \end{figure}
@@ -160,9 +160,12 @@ The full results are presented in Table \ref{table:result}.
 \subsubsection{Best Model Selection}
 Based on the analysis, \verb|n_neighbors| = 60 was determined to be the optimal number of neighbors for the KNN model. This setting provided the best balance between precision and recall, as evidenced by the F1 score. Although recall decreases with increasing \verb|n_neighbors|, this might be attributed to the inherent characteristics of the genre classification task, where songs do not cluster tightly within genres. This suggests a lack of consistent features within each genre. Given the nature of music genre classification, where false positives are less critical, high precision is of greater importance. Therefore, the model's ability to correctly identify true positives (high precision) is prioritized over the coverage of all relevant instances (recall).
 
+\section{Discussion}
+When evaluating the performance of Random Forest and k-Nearest Neighbors for classifying song genre based on individual characteristics of the song, the resulting model indicated that it is possible to predict the genre of a song based on these features, however there was a consistently low accuracy across the attempted models. Although the model evaluation metrics indicate that Random Forest had a higher accuracy, since both models had relatively low accuracy, we decided that k-Nearest Neighbors would be the ideal choice, as it would output more than one genre prediction for each song. In regards to potential improvements, one limiting factor that we found with our dataset was that genres of Spotify songs are generally assigned based on the artist, rather than the song itself. For example, every song by Olivia Rodrigo is listed as pop, despite songs such as “good 4 u” and “brutal” being largely classified as alternative rock or pop-punk by the media and mainstream audience. This adversely affected the model during the training process since track features correlated with rock songs might be labeled as pop, thus potentially making both rock and pop predictions less accurate during testing. Instead, using a dataset where genre is assigned to individual songs, would increase model accuracy, as the classified genre would be more accurately based on these features specific to the song. We would also explore less computationally expensive methods, as although we found k-Nearest Neighbors to be an effective model for this multi-class classification, it became increasingly time-consuming to process the large training data set, requiring a large k parameter. 
+
 \section{Conclusion}
 
-\section{Discussion}
+
 
 \section{Github link and Project Roadmap}
 
