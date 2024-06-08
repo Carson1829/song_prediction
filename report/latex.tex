@@ -108,7 +108,7 @@ The Random Forest model proved to have a relatively low performance and accuracy
 % adding Figure 5 - Random Forest Confusion Matrix
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{RFconf_mat.png}
+    \includegraphics[width=1.0\linewidth]{RFconf_mat.png}
     \caption{Confusion Matrix summarizing the predictions of the Random Forest model; used to identify TP, TN, FP, FN values}
     \label{rf_confmatrix}
 \end{figure}
@@ -132,13 +132,13 @@ The full results are presented in Table \ref{table:result}.
 \begin{table}
     \begin{center}
         \begin{tabular}{|c||c|c|c|c|c|} \hline
-            $n_{neighbors}$ & accuracy & precision & recall & f1
-            \\ \hline
-            20  & 0.5299 & 0.5248 & 0.5221 & 0.5213 \\
-            40  & 0.5353 & 0.5315 & 0.5244 & 0.5254 \\
-            60  & 0.5355 & 0.5324 & 0.5227 & 0.5246 \\
-            80  & 0.5347 & 0.5320 & 0.5203 & 0.5228 \\
-            100 & 0.5342 & 0.5317 & 0.5187 & 0.5215 \\
+           $n$ & accuracy & precision & recall & f1 & time   \\
+           \hline
+            20  & 0.5299 & 0.5248 & 0.5221 & 0.5213 & 98.71  \\
+            40  & 0.5353 & 0.5315 & 0.5244 & 0.5254 & 116.67 \\
+            60  & 0.5355 & 0.5324 & 0.5227 & 0.5246 & 130.93 \\
+            80  & 0.5347 & 0.5320 & 0.5203 & 0.5228 & 143.82 \\
+            100 & 0.5342 & 0.5317 & 0.5187 & 0.5215 & 151.74 \\
             \hline
         \end{tabular}
         \caption{Results for different $n_{neighbors}$. \textit{precision\_macro}, \textit{recall\_macro}, and \textit{f1\_macro} are the macro-averages, respectively.}
@@ -149,7 +149,7 @@ The full results are presented in Table \ref{table:result}.
     \item \textbf{Accuracy}: Shown in Figure \ref{fig:accuracy}, the accuracy varies from 0.5299 (k=20) to 0.5355 (k=60). This small range of variation (approximately 0.006) suggests that the model's performance is relatively stable across different values of \verb|n_neighbors|. The accuracy increased as the value of \verb|n_neighbors| approached 60, after which it started to decline. This indicates that the optimal number of neighbors for maximizing accuracy lies around 60.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.46\textwidth]{figure/result/KNN_Accuracy.png}
+        \includegraphics[width=1.0\linewidth]{figure/result/KNN_Accuracy.png}
         \caption{Accuracy}
         \label{fig:accuracy}
     \end{figure}
@@ -157,7 +157,7 @@ The full results are presented in Table \ref{table:result}.
     \item \textbf{Precision (Macro)}: Shown in Figure \ref{fig:precision}, the macro-averaged precision ranges from 0.5248 (k=20) to 0.5324 (k=60). This suggests that the model's precision across different classes is relatively consistent. The precision increased as the value of \verb|n_neighbors| approached 60, after which it started to decline. This indicates that the optimal number of neighbors for maximizing accuracy lies around 60.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.46\textwidth]{figure/result/KNN_Precision_Macro.png}
+        \includegraphics[width=1.0\linewidth]{figure/result/KNN_Precision_Macro.png}
         \caption{Macro Average of Precision}
         \label{fig:precision}
     \end{figure}
@@ -165,7 +165,7 @@ The full results are presented in Table \ref{table:result}.
     \item \textbf{Recall (Macro)}: Shown in Figure \ref{fig:recall}, the macro-averaged recall ranges from 0.5187 (k=100) to 0.5221 (k=20). This indicates that the model's recall across different classes does not vary significantly. In contrast to precision, recall values exhibited a downward trend as the number of neighbors increased. This inverse relationship between precision and recall is typical due to their inherent trade-off.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.46\textwidth]{figure/result/KNN_Recall_Macro.png}
+        \includegraphics[width=1.0\linewidth]{figure/result/KNN_Recall_Macro.png}
         \caption{Macro Average of Recall}
         \label{fig:recall}
     \end{figure}
@@ -173,7 +173,7 @@ The full results are presented in Table \ref{table:result}.
     \item \textbf{F1 Score (Macro)}: Shown in Figure \ref{fig:f1}, the macro-averaged F1 score ranges from 0.5213 (k=20) to 0.5246 (k=60), reflecting a balanced performance across different classes. The F1 score, which balances precision and recall, mirrored the trend observed in accuracy. It increased towards \verb|n_neighbors| = 40 and decreased beyond this point. Thus, the optimal F1 score is also achieved at \verb|n_neighbors| = 40.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.46\textwidth]{figure/result/KNN_F1_Macro.png}
+        \includegraphics[width=1.0\linewidth]{figure/result/KNN_F1_Macro.png}
         \caption{Macro Average of F1 Score}
         \label{fig:f1}
     \end{figure}
@@ -206,14 +206,14 @@ The experimental results for varying the number of top genres (\verb|t| $\in \{2
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.46\textwidth]{figure/result/KNN_Top_k_Accuracy.png}
+    \includegraphics[width=1.0\linewidth]{figure/result/KNN_Top_k_Accuracy.png}
     \caption{Top t Accuracy}
     \label{fig:top_t_accuracy}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.46\textwidth]{figure/result/KNN_Weighted_Top_k_Accuracy.png}
+    \includegraphics[width=1.0\linewidth]{figure/result/KNN_Weighted_Top_k_Accuracy.png}
     \caption{Weighted Top t Accuracy}
     \label{fig:weighted_top_t_accuracy}
 \end{figure}
@@ -227,7 +227,7 @@ The results show that as the value of $t$ increases, the Top K Accuracy consiste
     \item As $t$ increases beyond 3, the Weighted Accuracy decreases, highlighting the trade-off between including more potential genres and maintaining prediction specificity.
 \end{itemize}
 
-These findings underscore the importance of selecting an optimal value for $t$ that balances accuracy and specificity in genre prediction tasks.
+These findings underscore the importance of selecting an optimal value for $t$ that balances accuracy and specificity in genre prediction tasks. Certainly, changing the type and parameters of the weight function will change the optimal $t$, but exponential weights, where the decay in accuracy increases as $t$ increases, are suitable, and the value $t=3$ seems reasonable.
 
 \section{Conclusion}
 The model demonstrates stable performance across different values of $n_{neighbors}$, indicating its robustness in genre classification tasks. However, despite this stability, the overall performance remains relatively low, suggesting the need for further improvements.
