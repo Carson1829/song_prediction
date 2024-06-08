@@ -98,8 +98,67 @@ In order to build a classification model to classify the genre of a track based 
 
 \section{Experimental Results and Evaluation}
 \subsection{Model Performances}
+\subsubsection{Assumption}
+\begin{itemize}
+    \item \textbf{Experiment Setup}: The performance of the K-NN model was evaluated by varying the number of neighbors (k) to 20, 50, 60, 70, and 100 on a dataset containing approximately 250,000 entries.
+    \item \textbf{Performance Metrics}: The accuracy, precision, recall, and F1 score of each model were compared based on the confusion matrix.
+    \item \textbf{Genre Analysis}: The dataset includes 9 genres. Macro averages are compared for each genre. It is important to note that the micro averages for accuracy, precision, recall, and F1 score will be the same. There is a significant disparity in the sample sizes of each genre, with differences up to six times, suggesting that macro averages might not accurately reflect the model's performance.
+\end{itemize}
+
+\subsubsection{Result and Analysis}
+The full results are presented in Table \ref{table:result}.
+\begin{table}
+    \begin{center}
+        \begin{tabular}{|c||c|c|c|c|c|} \hline
+            n & accuracy & precision & recall & f1 & time \\ \hline
+            20  & 0.5301 & 0.5266 & 0.5240 & 0.5233 & 160.1 \\
+            50  & 0.5335 & 0.5314 & 0.5235 & 0.5249 & 186.7 \\
+            60  & 0.5340 & 0.5323 & 0.5231 & 0.5250 & 200.1 \\
+            70  & 0.5335 & 0.5316 & 0.5218 & 0.5237 & 207.2 \\
+            100 & 0.5333 & 0.5319 & 0.5197 & 0.5224 & 216.1 \\
+            \hline
+        \end{tabular}
+        \caption{Result. \textit{precision}, \textit{recall}, and \textit{f1} are the macro-averages, respectively. \textit{time} is the time taken to train the model for each number of neighbors.}
+        \label{table:result}
+    \end{center}
+\end{table}
+\begin{itemize}
+    \item \textbf{Accuracy}: Shown in Figure \ref{fig:accuracy}, the accuracy varies from 0.5301 (k=20) to 0.5340 (k=60). This small range of variation (approximately 0.004) suggests that the model's performance is relatively stable across different values of \verb|n_neighbors|. The accuracy increased as the value of \verb|n_neighbors| approached 60, after which it started to decline. This indicates that the optimal number of neighbors for maximizing accuracy lies around 60.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.46\textwidth]{figure/result/KNN_Accuracy.png}
+        \caption{Accuracy}
+        \label{fig:accuracy}
+    \end{figure}
+    
+    \item \textbf{Precision (Macro)}: Shown in Figure \ref{fig:precision}, the macro-averaged precision ranges from 0.5266 (k=20) to 0.5323 (k=60). This suggests that the model's precision across different classes is relatively consistent. Precision values improved with the increase in the number of neighbors.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.46\textwidth]{figure/result/KNN_Precision_Macro.png}
+        \caption{Macro Average of Precision}
+        \label{fig:precision}
+    \end{figure}
+
+    \item \textbf{Recall (Macro)}: Shown in Figure \ref{fig:recall}, the macro-averaged recall ranges from 0.5197 (k=100) to 0.5240 (k=20). This indicates that the model's recall across different classes does not vary significantly. In contrast to precision, recall values exhibited a downward trend as the number of neighbors increased. This inverse relationship between precision and recall is typical due to their inherent trade-off.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.46\textwidth]{figure/result/KNN_Recall_Macro.png}
+        \caption{Macro Average of Recall}
+        \label{fig:recall}
+    \end{figure}
+    
+    \item \textbf{F1 Score (Macro)}: Shown in Figure \ref{fig:f1}, the macro-averaged F1 score ranges from 0.5224 (k=100) to 0.5250 (k=60), reflecting a balanced performance across different classes. The F1 score, which balances precision and recall, mirrored the trend observed in accuracy. It increased towards \verb|n_neighbors| = 60 and decreased beyond this point. Thus, the optimal F1 score is also achieved at \verb|n_neighbors| = 60.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.46\textwidth]{figure/result/KNN_F1_Macro.png}
+        \caption{Macro Average of F1 Score}
+        \label{fig:f1}
+    \end{figure}
+\end{itemize}
 
 \subsection{Model Implications}
+\subsubsection{Best Model Selection}
+Based on the analysis, \verb|n_neighbors| = 60 was determined to be the optimal number of neighbors for the KNN model. This setting provided the best balance between precision and recall, as evidenced by the F1 score. Although recall decreases with increasing \verb|n_neighbors|, this might be attributed to the inherent characteristics of the genre classification task, where songs do not cluster tightly within genres. This suggests a lack of consistent features within each genre. Given the nature of music genre classification, where false positives are less critical, high precision is of greater importance. Therefore, the model's ability to correctly identify true positives (high precision) is prioritized over the coverage of all relevant instances (recall).
 
 \section{Conclusion}
 
