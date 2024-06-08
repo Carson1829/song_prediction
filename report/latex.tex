@@ -100,30 +100,38 @@ In order to build a classification model to classify the genre of a track based 
 \subsection{Model Performances}
 \subsubsection{Assumption}
 \begin{itemize}
-    \item \textbf{Experiment Setup}: The performance of the K-NN model was evaluated by varying the number of neighbors (k) to 20, 50, 60, 70, and 100 on a dataset containing approximately 250,000 entries.
+    \item \textbf{Best K Value}: The performance of the KNN model was evaluated by varying the number of neighbors (k) to 20, 40, 60, 80, and 100 on a dataset containing approximately 250,000 entries.
     \item \textbf{Performance Metrics}: The accuracy, precision, recall, and F1 score of each model were compared based on the confusion matrix.
     \item \textbf{Genre Analysis}: The dataset includes 9 genres. Macro averages are compared for each genre. It is important to note that the micro averages for accuracy, precision, recall, and F1 score will be the same. There is a significant disparity in the sample sizes of each genre, with differences up to six times, suggesting that macro averages might not accurately reflect the model's performance.
+    \item \textbf{K-fold Cross Validation}: To mitigate the impact of sample size disparities among genres --- Depending on data splitting, samples of certain genres may be largely absent from the training data ---, K-fold cross-validation was applied to the training data, split at 80:20. The performance metrics for each fold were averaged to represent the accuracy of the KNN model for each number of neighbors (k). Note that the best performance was not adopted; instead, the average performance across folds was used.
+    \item \textbf{Top-t Assumption}:
+    \begin{itemize}
+        \item Single genre prediction results in low accuracy. To mitigate this, the top \verb|t| genres with the highest counts among the nearest neighbors are considered as the prediction. The accuracy is then measured based on whether the true genre of the test track is included within these top \verb|t| predicted genres.
+        \item Naturally, as the value of \verb|t| increases, the coverage improves, leading to higher accuracy. However, this also reduces the strictness of the prediction. Therefore, accuracy weighted by \verb|t| is used for comparison.
+        \item The weighting is done using $e^{-t/N}$, where $N$ is the total number of genres, which is 9 in our dataset.
+    \end{itemize}
 \end{itemize}
 
-\subsubsection{Result and Analysis}
+\subsubsection{Best $K$ Value Experiment}
 The full results are presented in Table \ref{table:result}.
 \begin{table}
     \begin{center}
         \begin{tabular}{|c||c|c|c|c|c|} \hline
-            n & accuracy & precision & recall & f1 & time \\ \hline
-            20  & 0.5301 & 0.5266 & 0.5240 & 0.5233 & 160.1 \\
-            50  & 0.5335 & 0.5314 & 0.5235 & 0.5249 & 186.7 \\
-            60  & 0.5340 & 0.5323 & 0.5231 & 0.5250 & 200.1 \\
-            70  & 0.5335 & 0.5316 & 0.5218 & 0.5237 & 207.2 \\
-            100 & 0.5333 & 0.5319 & 0.5197 & 0.5224 & 216.1 \\
+            $n_{neighbors}$ & accuracy & precision & recall & f1
+            \\ \hline
+            20  & 0.5299 & 0.5248 & 0.5221 & 0.5213 \\
+            40  & 0.5353 & 0.5315 & 0.5244 & 0.5254 \\
+            60  & 0.5355 & 0.5324 & 0.5227 & 0.5246 \\
+            80  & 0.5347 & 0.5320 & 0.5203 & 0.5228 \\
+            100 & 0.5342 & 0.5317 & 0.5187 & 0.5215 \\
             \hline
         \end{tabular}
-        \caption{Result. \textit{precision}, \textit{recall}, and \textit{f1} are the macro-averages, respectively. \textit{time} is the time taken to train the model for each number of neighbors.}
+        \caption{Results for different $n_{neighbors}$. \textit{precision\_macro}, \textit{recall\_macro}, and \textit{f1\_macro} are the macro-averages, respectively.}
         \label{table:result}
     \end{center}
 \end{table}
 \begin{itemize}
-    \item \textbf{Accuracy}: Shown in Figure \ref{fig:accuracy}, the accuracy varies from 0.5301 (k=20) to 0.5340 (k=60). This small range of variation (approximately 0.004) suggests that the model's performance is relatively stable across different values of \verb|n_neighbors|. The accuracy increased as the value of \verb|n_neighbors| approached 60, after which it started to decline. This indicates that the optimal number of neighbors for maximizing accuracy lies around 60.
+    \item \textbf{Accuracy}: Shown in Figure \ref{fig:accuracy}, the accuracy varies from 0.5299 (k=20) to 0.5355 (k=60). This small range of variation (approximately 0.006) suggests that the model's performance is relatively stable across different values of \verb|n_neighbors|. The accuracy increased as the value of \verb|n_neighbors| approached 60, after which it started to decline. This indicates that the optimal number of neighbors for maximizing accuracy lies around 60.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.46\textwidth]{figure/result/KNN_Accuracy.png}
@@ -131,7 +139,7 @@ The full results are presented in Table \ref{table:result}.
         \label{fig:accuracy}
     \end{figure}
     
-    \item \textbf{Precision (Macro)}: Shown in Figure \ref{fig:precision}, the macro-averaged precision ranges from 0.5266 (k=20) to 0.5323 (k=60). This suggests that the model's precision across different classes is relatively consistent. Precision values improved with the increase in the number of neighbors.
+    \item \textbf{Precision (Macro)}: Shown in Figure \ref{fig:precision}, the macro-averaged precision ranges from 0.5248 (k=20) to 0.5324 (k=60). This suggests that the model's precision across different classes is relatively consistent. The precision increased as the value of \verb|n_neighbors| approached 60, after which it started to decline. This indicates that the optimal number of neighbors for maximizing accuracy lies around 60.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.46\textwidth]{figure/result/KNN_Precision_Macro.png}
@@ -139,7 +147,7 @@ The full results are presented in Table \ref{table:result}.
         \label{fig:precision}
     \end{figure}
 
-    \item \textbf{Recall (Macro)}: Shown in Figure \ref{fig:recall}, the macro-averaged recall ranges from 0.5197 (k=100) to 0.5240 (k=20). This indicates that the model's recall across different classes does not vary significantly. In contrast to precision, recall values exhibited a downward trend as the number of neighbors increased. This inverse relationship between precision and recall is typical due to their inherent trade-off.
+    \item \textbf{Recall (Macro)}: Shown in Figure \ref{fig:recall}, the macro-averaged recall ranges from 0.5187 (k=100) to 0.5221 (k=20). This indicates that the model's recall across different classes does not vary significantly. In contrast to precision, recall values exhibited a downward trend as the number of neighbors increased. This inverse relationship between precision and recall is typical due to their inherent trade-off.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.46\textwidth]{figure/result/KNN_Recall_Macro.png}
@@ -147,7 +155,7 @@ The full results are presented in Table \ref{table:result}.
         \label{fig:recall}
     \end{figure}
     
-    \item \textbf{F1 Score (Macro)}: Shown in Figure \ref{fig:f1}, the macro-averaged F1 score ranges from 0.5224 (k=100) to 0.5250 (k=60), reflecting a balanced performance across different classes. The F1 score, which balances precision and recall, mirrored the trend observed in accuracy. It increased towards \verb|n_neighbors| = 60 and decreased beyond this point. Thus, the optimal F1 score is also achieved at \verb|n_neighbors| = 60.
+    \item \textbf{F1 Score (Macro)}: Shown in Figure \ref{fig:f1}, the macro-averaged F1 score ranges from 0.5213 (k=20) to 0.5246 (k=60), reflecting a balanced performance across different classes. The F1 score, which balances precision and recall, mirrored the trend observed in accuracy. It increased towards \verb|n_neighbors| = 40 and decreased beyond this point. Thus, the optimal F1 score is also achieved at \verb|n_neighbors| = 40.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.46\textwidth]{figure/result/KNN_F1_Macro.png}
@@ -156,16 +164,65 @@ The full results are presented in Table \ref{table:result}.
     \end{figure}
 \end{itemize}
 
-\subsection{Model Implications}
-\subsubsection{Best Model Selection}
-Based on the analysis, \verb|n_neighbors| = 60 was determined to be the optimal number of neighbors for the KNN model. This setting provided the best balance between precision and recall, as evidenced by the F1 score. Although recall decreases with increasing \verb|n_neighbors|, this might be attributed to the inherent characteristics of the genre classification task, where songs do not cluster tightly within genres. This suggests a lack of consistent features within each genre. Given the nature of music genre classification, where false positives are less critical, high precision is of greater importance. Therefore, the model's ability to correctly identify true positives (high precision) is prioritized over the coverage of all relevant instances (recall).
+\textbf{Implication}:
+Upon analyzing the trends for each performance metric, it is evident that the variations across different values of $n_{neighbors}$ are relatively small. This indicates that the model's performance remains stable across different neighborhood sizes. However, it is important to note that the values for all metrics hover around 50\%, which suggests that the performance of this classification model is quite low. The stability observed in the model's performance metrics across different neighborhood sizes does not compensate for its overall low accuracy, precision, recall, and F1 scores. Therefore, it can be concluded that while the model's stability is a positive aspect, its effectiveness in classifying genres is limited and requires significant improvement.
+
+\subsubsection{Top-t Experiment}
+The experimental results for varying the number of top genres (\verb|t| $\in \{2, 3, \ldots, N-1\}$) are presented in Table \ref{tab:top_t}. Additionally, the trends in accuracy and weighted accuracy are visualized in Figure \ref{fig:top_t_accuracy} and Figure \ref{fig:weighted_top_t_accuracy} respectively.
+
+\begin{table}[h]
+    \centering
+    \caption{Top K Accuracy and Weighted Accuracy for Different Values of $t$}
+    \label{tab:top_t}
+    \begin{tabular}{|c||c|c|}
+    \hline
+    $t$ & Top t Accuracy & Weighted Accuracy \\
+    \hline
+    2 & 0.7406 & 0.5930 \\
+    3 & 0.8428 & 0.6039 \\
+    4 & 0.9036 & 0.5794 \\
+    5 & 0.9453 & 0.5424 \\
+    6 & 0.9718 & 0.4989 \\
+    7 & 0.9850 & 0.4525 \\
+    8 & 0.9899 & 0.4070 \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.46\textwidth]{figure/result/KNN_Top_k_Accuracy.png}
+    \caption{Top t Accuracy}
+    \label{fig:top_t_accuracy}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.46\textwidth]{figure/result/KNN_Weighted_Top_k_Accuracy.png}
+    \caption{Weighted Top t Accuracy}
+    \label{fig:weighted_top_t_accuracy}
+\end{figure}
+
+The results show that as the value of $t$ increases, the Top K Accuracy consistently improves. This is expected, as considering more genres increases the likelihood that the true genre is included in the top predictions. However, the Weighted Accuracy, which incorporates the penalty term $e^{-t/N}$ to account for the reduction in strictness, shows a different trend. The Weighted Accuracy peaks at $t = 3$ and then decreases as $t$ increases. This indicates that while increasing $t$ improves coverage, it also reduces the model's specificity.
+
+\textbf{Implication}:
+\begin{itemize}
+    \item \textbf{Top t Accuracy} increases with $t$, reaching nearly 99\% when $t = 8$.
+    \item \textbf{Weighted Accuracy} peaks at $t = 3$, suggesting that this value balances coverage and specificity most effectively for this dataset.
+    \item As $t$ increases beyond 3, the Weighted Accuracy decreases, highlighting the trade-off between including more potential genres and maintaining prediction specificity.
+\end{itemize}
+
+These findings underscore the importance of selecting an optimal value for $t$ that balances accuracy and specificity in genre prediction tasks.
+
+\section{Conclusion}
+The model demonstrates stable performance across different values of $n_{neighbors}$, indicating its robustness in genre classification tasks. However, despite this stability, the overall performance remains relatively low, suggesting the need for further improvements.
+
+Based on the analysis, \verb|n_neighbors| = 60 was determined to be the optimal number of neighbors for the KNN model. Precision (macro) peaks at \verb|n_neighbors| = 60, while recall and F1 score peak at \verb|n_neighbors| = 40. Accuracy also peaks at \verb|n_neighbors| = 60. Although recall and F1 score peak at a different value, the nature of the genre classification task suggests that false negatives (FN) have a smaller impact. Therefore, higher precision is prioritized in this context. Given that precision (macro) peaks at \verb|n_neighbors| = 60, this value is considered the optimal setting for the KNN model in this study.
+
+To compensate for the low overall accuracy of the model, the number of genres presented as predictions was increased. This approach involves considering the top T genres with the highest counts among the nearest neighbors as potential predictions. By doing so, the likelihood that the true genre is included in the predictions is increased, thereby improving user experience. However, it is crucial to balance between coverage and specificity, as increasing T improves coverage but reduces prediction strictness. Weighted accuracy, which incorporates a penalty term $e^{-t/N}$, where $N$ is the total number of genres, is used to evaluate the effectiveness of this approach. In our experiments, $t=3$ was found to be the optimal value. Therefore, when applying this model for genre classification, it is expected to present the top 3 genres as predictions.
 
 \section{Discussion}
 When evaluating the performance of Random Forest and k-Nearest Neighbors for classifying song genre based on individual characteristics of the song, the resulting model indicated that it is possible to predict the genre of a song based on these features, however there was a consistently low accuracy across the attempted models. Although the model evaluation metrics indicate that Random Forest had a higher accuracy, since both models had relatively low accuracy, we decided that k-Nearest Neighbors would be the ideal choice, as it would output more than one genre prediction for each song. In regards to potential improvements, one limiting factor that we found with our dataset was that genres of Spotify songs are generally assigned based on the artist, rather than the song itself. For example, every song by Olivia Rodrigo is listed as pop, despite songs such as “good 4 u” and “brutal” being largely classified as alternative rock or pop-punk by the media and mainstream audience. This adversely affected the model during the training process since track features correlated with rock songs might be labeled as pop, thus potentially making both rock and pop predictions less accurate during testing. Instead, using a dataset where genre is assigned to individual songs, would increase model accuracy, as the classified genre would be more accurately based on these features specific to the song. We would also explore less computationally expensive methods, as although we found k-Nearest Neighbors to be an effective model for this multi-class classification, it became increasingly time-consuming to process the large training data set, requiring a large k parameter. 
-
-\section{Conclusion}
-
-
 
 \section{Github link and Project Roadmap}
 
