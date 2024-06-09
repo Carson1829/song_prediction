@@ -102,7 +102,7 @@ The feature engineering step as well as how the model was split into training an
 The metrics utilized to evaluate the performance of the random forest and k-nearest neighbors models were accuracy, precision, recall and F-1 score. The model with the highest accuracy and relevant output was determined the most ideal model.
 
 \section{Experimental Results and Evaluation}
-\subsection{Model Performances}
+\subsection{Random Forest}
 The Random Forest model proved to have a relatively low performance and accuracy, even despite the implementation of XGBoost, which had a slightly lower accuracy result. Figure \ref{rf_confmatrix} summarizes the prediction results through a confusion matrix, from Random Forests without XGBoost. The  diagonal values indicate the true positives for each genre prediction, which is the number of songs with correctly identified genres, compared between the actual and predicted results. It appears that alt-rock, classical and hip-hop were the top three genres with significantly high numbers of true positives, while rock and pop had the lowest number of true positives. As these results are used to calculate performance metric such as accuracy, precision and the F1-score, it reflects on the lower accuracy result of approximately 50\% from the Random Forest model.
 
 % adding Figure 5 - Random Forest Confusion Matrix
@@ -113,6 +113,7 @@ The Random Forest model proved to have a relatively low performance and accuracy
     \label{rf_confmatrix}
 \end{figure}
 
+\subsection{KNN}
 \subsubsection{Assumption}
 \begin{itemize}
     \item \textbf{Best K Value}: The performance of the KNN model was evaluated by varying the number of neighbors (k) to 20, 40, 60, 80, and 100 on a dataset containing approximately 250,000 entries.
