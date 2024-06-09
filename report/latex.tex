@@ -150,7 +150,7 @@ The full results are presented in Table \ref{table:result}.
     \item \textbf{Accuracy}: Shown in Figure \ref{fig:accuracy}, the accuracy varies from 0.5299 (k=20) to 0.5355 (k=60). This small range of variation (approximately 0.006) suggests that the model's performance is relatively stable across different values of \verb|n_neighbors|. The accuracy increased as the value of \verb|n_neighbors| approached 60, after which it started to decline. This indicates that the optimal number of neighbors for maximizing accuracy lies around 60.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1.0\linewidth]{figure/result/KNN_Accuracy.png}
+        \includegraphics[width=1.0\linewidth]{KNN_Accuracy.png}
         \caption{Accuracy}
         \label{fig:accuracy}
     \end{figure}
@@ -158,7 +158,7 @@ The full results are presented in Table \ref{table:result}.
     \item \textbf{Precision (Macro)}: Shown in Figure \ref{fig:precision}, the macro-averaged precision ranges from 0.5248 (k=20) to 0.5324 (k=60). This suggests that the model's precision across different classes is relatively consistent. The precision increased as the value of \verb|n_neighbors| approached 60, after which it started to decline. This indicates that the optimal number of neighbors for maximizing accuracy lies around 60.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1.0\linewidth]{figure/result/KNN_Precision_Macro.png}
+        \includegraphics[width=1.0\linewidth]{KNN_precision_macro.png}
         \caption{Macro Average of Precision}
         \label{fig:precision}
     \end{figure}
@@ -166,7 +166,7 @@ The full results are presented in Table \ref{table:result}.
     \item \textbf{Recall (Macro)}: Shown in Figure \ref{fig:recall}, the macro-averaged recall ranges from 0.5187 (k=100) to 0.5221 (k=20). This indicates that the model's recall across different classes does not vary significantly. In contrast to precision, recall values exhibited a downward trend as the number of neighbors increased. This inverse relationship between precision and recall is typical due to their inherent trade-off.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1.0\linewidth]{figure/result/KNN_Recall_Macro.png}
+        \includegraphics[width=1.0\linewidth]{KNN_recall_macro.png}
         \caption{Macro Average of Recall}
         \label{fig:recall}
     \end{figure}
@@ -174,7 +174,7 @@ The full results are presented in Table \ref{table:result}.
     \item \textbf{F1 Score (Macro)}: Shown in Figure \ref{fig:f1}, the macro-averaged F1 score ranges from 0.5213 (k=20) to 0.5246 (k=60), reflecting a balanced performance across different classes. The F1 score, which balances precision and recall, mirrored the trend observed in accuracy. It increased towards \verb|n_neighbors| = 40 and decreased beyond this point. Thus, the optimal F1 score is also achieved at \verb|n_neighbors| = 40.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1.0\linewidth]{figure/result/KNN_F1_Macro.png}
+        \includegraphics[width=1.0\linewidth]{KNN_F1Score.png}
         \caption{Macro Average of F1 Score}
         \label{fig:f1}
     \end{figure}
@@ -207,14 +207,14 @@ The experimental results for varying the number of top genres (\verb|t| $\in \{2
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\linewidth]{figure/result/KNN_Top_k_Accuracy.png}
+    \includegraphics[width=1.0\linewidth]{KNN_Top_K_Accuracy.png}
     \caption{Top t Accuracy}
     \label{fig:top_t_accuracy}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\linewidth]{figure/result/KNN_Weighted_Top_k_Accuracy.png}
+    \includegraphics[width=1.0\linewidth]{KNN_weighted_Top_K_Accuracy.png}
     \caption{Weighted Top t Accuracy}
     \label{fig:weighted_top_t_accuracy}
 \end{figure}
