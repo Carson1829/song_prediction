@@ -241,8 +241,16 @@ To compensate for the low overall accuracy of the model, the number of genres pr
 When evaluating the performance of Random Forest and k-Nearest Neighbors for classifying song genre based on individual characteristics of the song, the resulting model indicated that it is possible to predict the genre of a song based on these features, however there was a consistently low accuracy across the attempted models. Since both models had relatively low accuracy, we decided that k-Nearest Neighbors would be the ideal choice, as it would output more than one genre prediction for each song. In regards to potential improvements, one limiting factor that we found with our dataset was that genres of Spotify songs are generally assigned based on the artist, rather than the song itself. For example, every song by Olivia Rodrigo is listed as pop, despite songs such as “good 4 u” and “brutal” being largely classified as alternative rock or pop-punk by the media and mainstream audience. This adversely affected the model during the training process since track features correlated with rock songs might be labeled as pop, thus potentially making both rock and pop predictions less accurate during testing. Instead, using a dataset where genre is assigned to individual songs, would increase model accuracy, as the classified genre would be more accurately based on these features specific to the song. We would also explore less computationally expensive methods, as although we found k-Nearest Neighbors to be an effective model for this multi-class classification, it became increasingly time-consuming to process the large training data set, requiring a large k parameter. 
 
 \section{Github link and Project Roadmap}
+Github Link: https://github.com/Carson1829/ECS171project
 
-\section{Distribution of Project Assignments}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{projectroadmap.jpeg}
+    \caption{Weighted Top t Accuracy}
+    \label{fig:roadmap}
+\end{figure}
+
+\subsection{Distribution of Project Assignments}
 In our project, the tasks were divided among group members to leverage individual strengths and ensure a comprehensive approach to both development and documentation. Below is a summary of the assigned responsibilities:
 
 \begin{itemize}
@@ -257,6 +265,5 @@ This structured distribution of tasks ensured that all aspects of the project we
 
 \section{Works Cited}
 \printbibliography
-
 
 \end{document}
