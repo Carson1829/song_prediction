@@ -1,8 +1,8 @@
 # ECS171project
 
 https://docs.google.com/document/d/1ahJZly2YhZnu19sYeA1utv6PY68tUGN5WVIFACvO9gM/edit
-
-https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset
+Smaller dataset: https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset
+Larger version of dataset: https://www.kaggle.com/datasets/amitanshjoshi/spotify-1million-tracks/data
 
 https://towardsdatascience.com/machine-learning-and-music-classification-a-content-based-filtering-approach-f2c4eb13bade
 
