@@ -8,7 +8,7 @@
 \usepackage{comment}
 \usepackage[a4paper, total={7in, 9in}]{geometry}
 \usepackage{biblatex}
-
+\usepackage{hyperref}
 \addbibresource{mybib.bib}
 
 \title{Spotify Tracks Genre Classification}
@@ -240,13 +240,14 @@ To compensate for the low overall accuracy of the model, the number of genres pr
 \section{Discussion}
 When evaluating the performance of Random Forest and k-Nearest Neighbors for classifying song genre based on individual characteristics of the song, the resulting model indicated that it is possible to predict the genre of a song based on these features, however there was a consistently low accuracy across the attempted models. Since both models had relatively low accuracy, we decided that k-Nearest Neighbors would be the ideal choice, as it would output more than one genre prediction for each song. In regards to potential improvements, one limiting factor that we found with our dataset was that genres of Spotify songs are generally assigned based on the artist, rather than the song itself. For example, every song by Olivia Rodrigo is listed as pop, despite songs such as “good 4 u” and “brutal” being largely classified as alternative rock or pop-punk by the media and mainstream audience. This adversely affected the model during the training process since track features correlated with rock songs might be labeled as pop, thus potentially making both rock and pop predictions less accurate during testing. Instead, using a dataset where genre is assigned to individual songs, would increase model accuracy, as the classified genre would be more accurately based on these features specific to the song. We would also explore less computationally expensive methods, as although we found k-Nearest Neighbors to be an effective model for this multi-class classification, it became increasingly time-consuming to process the large training data set, requiring a large k parameter. 
 
-\section{Github link and Project Roadmap}
-Github Link: https://github.com/Carson1829/ECS171project
+\section{Github and Project Roadmap}
+\textbf{Github Link} \href{https://github.com/Carson1829/ECS171project}{https://github.com/Carson1829/ECS171project}
 
+Figure \ref{fig:roadmap} shows our project roadmap, with a timeline of main project tasks that were completed throughout the quarter, including finalizing the use of Spotify track features in this dataset with predictive model objective of multi-class genre classification of songs, conducting literature review to gain insight into methods that have been successful in published research on machine learning for genre classification of music, completing exploratory data analysis and choosing techniques, the mid-quarter progress report, training and testing our models, evaluating model results to report, and developing a web-based front-end that takes user input of a song to output the predicted genre, implementing the k-nearest neighbors model.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\linewidth]{projectroadmap.jpeg}
-    \caption{Weighted Top t Accuracy}
+    \caption{Project Roadmap}
     \label{fig:roadmap}
 \end{figure}
 
@@ -255,9 +256,9 @@ In our project, the tasks were divided among group members to leverage individua
 
 \begin{itemize}
     \item Nabeha: Responsible for writing the Mid-Quarter Report and developing the web-app front-end code. She also contributed to the final report by writing the introduction, background, and dataset description/Exploratory Data Analysis (EDA). Additionally, Nabeha played a key role in recording the project demo.
-    \item Laksha: Contributed to writing the Mid-Quarter Report and developed the web-app back-end code. For the final report, Laksha wrote the literature review, further elaborated on the dataset description/EDA, and covered the model evaluation/results and conclusion/discussion sections.
+    \item Laksha: Contributed to writing the Mid-Quarter Report and developed the web-app back-end code. For the final report, Laksha wrote the literature review, further elaborated on the dataset description/EDA, and covered the model evaluation/results and discussion sections.
     \item Mia: Tasked with writing the Mid-Quarter Report and working on the web-app front-end code alongside Nabeha. She also wrote the literature review for the final report and participated in recording the project demo.
-    \item Shuzo: Focused on writing the Mid-Quarter Report, performing EDA, and implementing and evaluating the machine learning models. For the final report, Shuzo was responsible for the model evaluation/results and conslusion section.
+    \item Shuzo: Focused on writing the Mid-Quarter Report, performing EDA, and implementing and evaluating the machine learning models. For the final report, Shuzo was responsible for the model evaluation/results and conclusion section.
     \item Carson: Engaged in performing EDA and implementing and evaluating the machine learning models, while also contributing to both the front-end and back-end code of the web-app. Carson wrote the proposed methodology for the final report and was involved in recording the project demo.
 \end{itemize}
 
